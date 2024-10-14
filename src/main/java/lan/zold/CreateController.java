@@ -1,13 +1,9 @@
-package lan.zold.Controllers;
+package lan.zold;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
-import lan.zold.App;
-import lan.zold.Employee;
-import lan.zold.EmployeeSource;
-import lan.zold.Sqlite;
 
 public class CreateController {
 
@@ -49,5 +45,4 @@ public class CreateController {
         employeeSource = new EmployeeSource(new Sqlite());
         employeeSource.addEmployee(emp);
     }
-
 }

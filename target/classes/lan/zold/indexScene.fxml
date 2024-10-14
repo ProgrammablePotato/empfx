@@ -10,11 +10,12 @@
       <Button layoutX="20.0" layoutY="27.0" mnemonicParsing="false" onAction="#onClickBackButton" text="Visza UWU" />
       <TableView fx:id="empTable" layoutX="131.0" layoutY="20.0" prefHeight="361.0" prefWidth="422.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-            <TableColumn prefWidth="75.0" text="C3" />
-            <TableColumn prefWidth="75.0" text="C4" />
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Név" />
+            <TableColumn fx:id="cityCol" prefWidth="75.0" text="Város" />
+            <TableColumn fx:id="salaryCol" prefWidth="75.0" text="Fizetés" />
         </columns>
       </TableView>
+      <Button layoutX="43.0" layoutY="308.0" mnemonicParsing="false" onAction="#onClickExitButton" prefHeight="75.0" prefWidth="74.0" text="Kilép" />
    </children>
 </Pane>
