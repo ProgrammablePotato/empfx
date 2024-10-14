@@ -16,5 +16,6 @@
       <Button layoutX="248.0" layoutY="272.0" mnemonicParsing="false" onAction="#onClickAddButton" prefHeight="34.0" prefWidth="231.0" rotate="136.8" text="Kirúgás" />
       <Label layoutX="161.0" layoutY="54.0" text="Új dolgozó kirúgása" />
       <Button layoutX="460.0" layoutY="312.0" mnemonicParsing="false" onAction="#onClickExitButton" text="EEEEE" />
+      <Button layoutX="29.0" layoutY="29.0" mnemonicParsing="false" onAction="#onClickBackButton" rotate="180.0" text="Vissza" />
    </children>
 </Pane>

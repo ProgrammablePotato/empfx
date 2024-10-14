@@ -1,8 +1,9 @@
-package lan.zold;
+package lan.zold.Controllers;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import lan.zold.App;
 
 public class MainController {
 
@@ -18,7 +19,7 @@ public class MainController {
 
     @FXML
     void onClickListButton(ActionEvent event) {
-
+        App.setRoot("indexScene");
     }
 
 }

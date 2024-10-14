@@ -1,9 +1,13 @@
-package lan.zold;
+package lan.zold.Controllers;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import lan.zold.App;
+import lan.zold.Employee;
+import lan.zold.EmployeeSource;
+import lan.zold.Sqlite;
 
 public class CreateController {
 
@@ -22,6 +26,11 @@ public class CreateController {
     void onClickAddButton(ActionEvent event) {
         startAddEmployee();
         System.out.println("YEEEEEEEEHAAAAAAAW");
+    }
+
+    @FXML
+    void onClickBackButton(ActionEvent event) {
+        App.setRoot("mainScene");
     }
 
     @FXML
