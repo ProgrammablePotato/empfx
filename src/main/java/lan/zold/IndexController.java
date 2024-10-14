@@ -1,6 +1,10 @@
 package lan.zold;
 
+import java.util.ArrayList;
+
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -8,6 +12,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class IndexController {
+
+    EmployeeSource employeeSource;
 
     @FXML
     private TableView<Employee> empTable;
@@ -36,7 +42,10 @@ public class IndexController {
         cityCol.setCellValueFactory(new PropertyValueFactory<>("city"));
         salaryCol.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
-        empTable.getItems().add(new Employee(1, "Ernő", "Szeged", 315.0));
+        employeeSource = new EmployeeSource(new Sqlite());
+        ArrayList<Employee> emps = employeeSource.getEmployees();
+        ObservableList<Employee> empList = FXCollections.observableArrayList(emps);
+        empTable.getItems().addAll(empList);
     }
 
 }

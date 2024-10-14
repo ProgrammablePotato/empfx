@@ -24,7 +24,7 @@ public class EmployeeSource {
 
     private ArrayList<Employee> tryGetEmployees() throws SQLException{
         Connection conn = database.connect();
-        String sql = "select * from employess";
+        String sql = "select * from employees";
         Statement st = conn.createStatement();
         ResultSet rs = st.executeQuery(sql);
         ArrayList<Employee> empList = new ArrayList<>();
